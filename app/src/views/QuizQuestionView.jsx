@@ -61,12 +61,7 @@ export default class QuizQuestionView extends React.Component {
         prevChoice: answer.id,
       });
     } else {
-      // else a choice is already selected
-      // is it the same choice or a new choice?
-      // if it is the same choice,
-      // set 'isSelected' to false
-      // reset the description
-      // set [answer.id] to false
+      // a choice is already selected and we ask "did they click on the same answer or a new one?"
       // eslint-disable-next-line no-unused-expressions
       prevChoice === answer.id
         ? this.setState({
@@ -81,8 +76,6 @@ export default class QuizQuestionView extends React.Component {
         })
         // else we know it is a new choice,
         // we dont change state of 'isSelected'
-        // set the previous to current
-        // show the new choice's description
         : this.setState({
           // Shuffle state here
           // assign state at previous value false
