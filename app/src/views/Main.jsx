@@ -20,15 +20,12 @@ const styles = StyleSheet.create({
   logoText: {
     color: '#fff',
     textAlign: 'center',
-    fontWeight: 'bold',
-    // fontFamily: 'LobsterTwo-Bold',
     fontSize: 56,
     marginTop: 10,
   },
 });
 
 function MainScreen() {
-  const [fontLoaded, setFontLoad] = useState(true);
   return (
     <ImageBackground source={require('../assets/images/cascade.png')} style={{ width: '100%', height: '100%' }}>
       <Header // Temporary header with button to eventually open drawer
@@ -49,9 +46,7 @@ function MainScreen() {
         }
       />
       <View style={styles.container}>
-        {fontLoaded ? (
-          <Text style={styles.logoText}>Welcome to InSight!</Text>
-        ) : null}
+        <Text style={styles.logoText}>Welcome to InSight!</Text>
       </View>
     </ImageBackground>
   );

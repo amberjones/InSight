@@ -22,7 +22,7 @@ const enterFakeData = (
       idBadge: 2,
     }))
     .then(() => Course.create({
-      idParent: 1,
+      idParent: 2,
       topic: 'Budgeting 103',
       description: 'This is a continuing course on budgeting',
       idBadge: 3,
@@ -32,6 +32,36 @@ const enterFakeData = (
       topic: 'Taxes 101',
       description: 'This is a description on the taxes course',
       idBadge: 4,
+    }))
+    .then(() => Course.create({
+      idParent: 4,
+      topic: 'Taxes 102',
+      description: 'This is Taxes review part 2',
+      idBadge: 5,
+    }))
+    .then(() => Course.create({
+      idParent: null,
+      topic: 'Rainy Day Funds',
+      description: 'How to save for Emergencies',
+      idBadge: 6,
+    }))
+    .then(() => Course.create({
+      idParent: null,
+      topic: 'Investing',
+      description: 'Basic terminology of Investing',
+      idBadge: 7,
+    }))
+    .then(() => Course.create({
+      idParent: null,
+      topic: 'Loans 101',
+      description: 'Basic terminology of Loans',
+      idBadge: 8,
+    }))
+    .then(() => Course.create({
+      idParent: 8,
+      topic: 'Loans 102',
+      description: 'Advanced terminology of Loans',
+      idBadge: 9,
     }))
     .then(() => Concept.create({
       idCourse: 1,
@@ -124,8 +154,38 @@ const enterFakeData = (
     .then(() => Badge.create({
       name: 'Taxling',
       iconUrl: 'https://cdn0.iconfinder.com/data/icons/business-startup-10/50/67-512.png',
-      experiencePoints: 400,
+      experiencePoints: 100,
       description: 'This money won\'t grow on trees',
+    }))
+    .then(() => Badge.create({
+      name: 'Taxator',
+      iconUrl: 'https://cdn0.iconfinder.com/data/icons/business-startup-10/50/43-512.png',
+      experiencePoints: 200,
+      description: 'You\'re an expert with Taxes!',
+    }))
+    .then(() => Badge.create({
+      name: 'Savvy Saver',
+      iconUrl: 'https://cdn0.iconfinder.com/data/icons/business-startup-10/50/26-512.png',
+      experiencePoints: 200,
+      description: 'Lookout world, nothing\'s going to get you down!',
+    }))
+    .then(() => Badge.create({
+      name: 'GrowthSpurt',
+      iconUrl: 'https://cdn0.iconfinder.com/data/icons/business-startup-10/50/1-512.png',
+      experiencePoints: 300,
+      description: 'You\'re on your way up!',
+    }))
+    .then(() => Badge.create({
+      name: 'Loaner',
+      iconUrl: 'https://cdn0.iconfinder.com/data/icons/business-startup-10/50/74-512.png',
+      experiencePoints: 300,
+      description: 'Whoh, you\'re the cool kid on the block now',
+    }))
+    .then(() => Badge.create({
+      name: 'Loan Musketeer',
+      iconUrl: 'https://cdn0.iconfinder.com/data/icons/business-startup-10/50/34-512.png',
+      experiencePoints: 600,
+      description: 'You\'re well equiped for a future in finance..',
     }))
     .then(() => UserBadge.create({
       idUser: 1,

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createDrawerNavigator } from 'react-navigation-drawer';
@@ -17,7 +17,7 @@ import QuizScreen from './src/views/Quiz';
 // we are using it to return the rest of our app views.
 export default class App extends React.Component {
   render() {
-    return <AppContainer />;
+    return <AppContainer />
   }
 }
 
