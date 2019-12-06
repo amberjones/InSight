@@ -4,7 +4,7 @@ import SvgExample from './MapSVG';
 
 function AboutScreen() {
   return (
-    <View>
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Text>About Screen</Text>
     </View>
   );
