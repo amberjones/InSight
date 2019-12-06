@@ -20,7 +20,7 @@ function MapSvg(props) {
         <Circle
           cx="20"
           cy="20"
-          r="8"
+          r="6"
           fill="pink"
           title={courses[0].topic}
           key={courses[0].topic}
@@ -29,7 +29,7 @@ function MapSvg(props) {
         <Circle
           cx="30"
           cy="80"
-          r="8"
+          r="6"
           fill="pink"
           title={courses[1].topic}
           key={courses[1].topic}
@@ -38,7 +38,7 @@ function MapSvg(props) {
         <Circle
           cx="56"
           cy="70"
-          r="8"
+          r="6"
           fill="pink"
           title={courses[2].topic}
           key={courses[2].topic}
@@ -47,11 +47,38 @@ function MapSvg(props) {
         <Circle
           cx="90"
           cy="90"
-          r="8"
+          r="6"
           fill="pink"
           title={courses[3].topic}
           key={courses[3].topic}
           onPress={() => { navigate('Course', { id: courses[3].id, name: courses[3].topic }); }}
+        />
+        <Circle
+          cx="45"
+          cy="15"
+          r="6"
+          fill="pink"
+          title={courses[4].topic}
+          key={courses[4].topic}
+          onPress={() => { navigate('Course', { id: courses[4].id, name: courses[4].topic }); }}
+        />
+        <Circle
+          cx="70"
+          cy="45"
+          r="6"
+          fill="pink"
+          title={courses[5].topic}
+          key={courses[5].topic}
+          onPress={() => { navigate('Course', { id: courses[5].id, name: courses[5].topic }); }}
+        />
+        <Circle
+          cx="90"
+          cy="20"
+          r="6"
+          fill="pink"
+          title={courses[6].topic}
+          key={courses[6].topic}
+          onPress={() => { navigate('Course', { id: courses[6].id, name: courses[6].topic }); }}
         />
       </Svg>
     </View>
