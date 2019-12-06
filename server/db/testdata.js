@@ -12,7 +12,7 @@ const enterFakeData = (
   Course.create({
     idParent: null,
     topic: 'Budgeting 101',
-    description: 'This is a great course on budgeting',
+    description: 'Introduction to Budgeting',
     idBadge: 1,
   })
     .then(() => Course.create({
@@ -24,7 +24,7 @@ const enterFakeData = (
     .then(() => Course.create({
       idParent: 2,
       topic: 'Budgeting 103',
-      description: 'This is a continuing course on budgeting',
+      description: 'This is a advanced course on budgeting',
       idBadge: 3,
     }))
     .then(() => Course.create({
@@ -36,7 +36,7 @@ const enterFakeData = (
     .then(() => Course.create({
       idParent: 4,
       topic: 'Taxes 102',
-      description: 'This is Taxes review part 2',
+      description: 'This is Taxes 102',
       idBadge: 5,
     }))
     .then(() => Course.create({
@@ -73,6 +73,11 @@ const enterFakeData = (
       question: 'How do you create a budget?',
       description: 'Determine Income, Calculate Expenses, Set Financial Goals!',
     }))
+    .then(() => Concept.create({
+      idCourse: 2,
+      question: 'What is the 50 20 30 budget rule?',
+      description: 'Suggestion that you spend 50% of your after-tax income on needs, 30% on wants, and 20% to savings.',
+    }))
     .then(() => Answer.create({
       choice: 'you buy everything',
       description: 'No, dont do that!',
@@ -108,6 +113,24 @@ const enterFakeData = (
       description: 'maybe you should take charge of your financial life',
       isCorrect: false,
       idConcept: 2,
+    }))
+    .then(() => Answer.create({
+      choice: 'spend 50% on needs, 30% on wants, and 20% to savings',
+      description: 'This is a great way to allocate your money into budget categories, especially for the first time!',
+      isCorrect: true,
+      idConcept: 3,
+    }))
+    .then(() => Answer.create({
+      choice: 'spend 50% on wants, 30% on needs, and 20% to savings',
+      description: 'We appreicate that you known what you want, but spending that much on wants is not condusive to balance',
+      isCorrect: false,
+      idConcept: 3,
+    }))
+    .then(() => Answer.create({
+      choice: 'spend 50% on saving, 30% on needs, and 20% to wants',
+      description: 'Whoo you are pretty frugal! Not a bad thing, yet this isn\'t the saying',
+      isCorrect: false,
+      idConcept: 3,
     }))
     .then(() => User.create({
       firstName: 'Amber',
