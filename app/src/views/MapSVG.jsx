@@ -4,8 +4,18 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigation } from 'react-navigation-hooks';
 import axios from 'axios';
-import { View, StyleSheet, ImageBackground } from 'react-native';
+import { View, StyleSheet, ImageBackground, Image } from 'react-native';
 import Svg, { Circle, Rect, SvgUri } from 'react-native-svg';
+
+// const styles = StyleSheet.create({
+//   mapIcon: {
+//     width: 50,
+//     height: 50,
+//     x: '12',
+//     y: '12',
+//   },
+// });
+
 
 function MapSvg(props) {
   const { courses } = props;
@@ -17,6 +27,10 @@ function MapSvg(props) {
     <View>
       <Svg height="100%" width="100%" viewBox="10 10 100 100">
         {/* The viewBox attribute defines the position and dimensions, in user space, of an SVG */}
+        <Image
+          source={{ uri: 'https://cdn0.iconfinder.com/data/icons/business-startup-10/50/34-512.png' }}
+          style={{ width: 40, height: 40, zIndex: 0, position: 'absolute', top: 59, bottom: 3, left: 50, right: 40 }}
+        />
         <Circle
           cx="20"
           cy="20"
@@ -53,7 +67,7 @@ function MapSvg(props) {
           key={courses[3].topic}
           onPress={() => { navigate('Course', { id: courses[3].id, name: courses[3].topic }); }}
         />
-        <Circle
+        {/* <Circle
           cx="45"
           cy="15"
           r="6"
@@ -79,7 +93,7 @@ function MapSvg(props) {
           title={courses[6].topic}
           key={courses[6].topic}
           onPress={() => { navigate('Course', { id: courses[6].id, name: courses[6].topic }); }}
-        />
+        /> */}
       </Svg>
     </View>
   );
