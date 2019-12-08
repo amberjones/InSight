@@ -25,13 +25,13 @@ export default class Login extends React.Component {
       })
     
       if (type === "success") {
-        // console.log('google user',user);
         this.setState({
           signedIn: true,
           name: user.name,
-           photoUrl: user.photoUrl
-        })
-        return axios.post('http://localhost:8080/profile/user/', {
+          photoUrl: user.photoUrl
+        }) 
+        // console.log('google user',user);
+        axios.post('http://localhost:8080/profile/user/', {
            user,
           })
             .then(function (response) {
@@ -89,7 +89,7 @@ const LoggedInPage = props => {
         <Text style={styles.header}>Insight</Text>
         <Text style={styles.header}>Welcome:{props.name}</Text>
         <Image style={styles.image} source={{ uri: props.photoUrl }} />
-        <Text style={styles.header}>Swipe right to start your journey to financial freedom</Text>
+        <Text style={styles.header}>Swipe right to start your journey to financial Enlightenment</Text>
       </View>
     </View>
   )
