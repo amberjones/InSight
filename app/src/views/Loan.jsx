@@ -98,7 +98,7 @@ export default class Loan extends Component {
         // return `At an interest rate of ${rate}% with ${months} monthly payments & a principal of $${p}, your total installment repayments will be $${this.total()}!`;
       };
     }
-
+ 
     const loan = new MonthlyPayments(this.state.rate, this.state.principal, this.state.years);
 
     this.setState({
